@@ -1,0 +1,10 @@
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text-3d {
+  text-shadow: 1px 1px 0 #444, 2px 2px 0 #444, 3px 3px 0 #444;
+  font-size: 4em;
+  color: rgb(201, 201, 201);
+  transform: rotateY(20deg);
+  font-family: cursive;
+}
