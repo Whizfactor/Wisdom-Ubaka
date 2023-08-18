@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class UsersService {
+export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<any> {
-    return this.http.get<any>('https://jsonplaceholder.typicode.com/users');
+  getPosts(): Observable<any> {
+    return this.http.get<any>('https://jsonplaceholder.typicode.com/posts');
   }
 
 }
