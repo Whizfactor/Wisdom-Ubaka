@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService, PostsService } from './services/api.service';
+import { UsersService } from './services/users.service';
+import { PostsService } from './services/posts.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
