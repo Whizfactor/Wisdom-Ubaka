@@ -1,20 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UsersService } from './services/users.service';
-import { PostsService } from './services/posts.service';
+import { UserService } from './services/user.service';
+import { PostService } from './services/post.service';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UserComponent } from './components/user/user.component';
+import { PostComponent } from './components/post/post.component';
+import { AlbumComponent } from './components/album/album.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    PostComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [UsersService, PostsService],
+  providers: [UserService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
