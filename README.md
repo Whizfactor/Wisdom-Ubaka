@@ -1,4 +1,4 @@
-Certainly, here's a template for a README.md file for your StackBlitz project that consumes JSONPlaceholder dummy data. Make sure to replace placeholders like `<YOUR-PROJECT-NAME>` with your actual project name and customize the content as needed:
+Project by Wisdom "Whizfactor" Ubaka
 
 ```markdown
 # JSONPlaceholder Dummy Data Consumption in Angular
@@ -66,4 +66,3 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 *This project was created for educational and learning purposes. JSONPlaceholder is a mock API, and this project is not intended for production use.*
 ```
 
-Make sure to include a `LICENSE` file in your project directory that contains the text of the GNU General Public License v3.0, as required by the license terms. Adjust the instructions and content as needed to match your project and StackBlitz environment.

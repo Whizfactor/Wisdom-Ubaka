@@ -1,24 +1,23 @@
-<div class="container">
-<h2 class="text-3d text-center mt-5">Users</h2>
-<div class="card-deck">
-  <div class="card shadow my-3 border-0" *ngFor="let user of users">
-    <div class="card-body">
-      <h5 class="card-title">{{user.name}}</h5>
-      <p class="card-text">{{user.email}}</p>
+<!-- header -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-3d" href="">Wisdom JSON-P</a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngFor="let nav of navLists">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="[nav.url]" routerLinkActive="activated">{{nav.title}}</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
-</div>
-</div>
+</nav>
+<!-- header ends -->
 
-<div class="container">
-<h2 class="text-3d text-center mt-5">Posts</h2>
-<div class="card-deck">
-  <div class="card shadow my-3 border-0" *ngFor="let post of posts">
-    <div class="card-body">
-      <h5 class="card-title text-capitalize">{{post.title}}</h5>
-      <p class="card-text">{{post.body}}</p>
-     
-    </div>
-  </div>
-</div>
-</div>
+<router-outlet></router-outlet>

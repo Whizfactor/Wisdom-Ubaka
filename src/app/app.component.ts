@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from './services/user.service';
-import { PostService } from './services/post.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  users: any;
-  posts: any;
 
-  constructor(private userService: UserService, private postService: PostService) { }
+  // Create a property to track whether the menu is open.
+	// Start with the menu collapsed so that it does not
+	// appear initially when the page loads on a small screen!
+	isMenuCollapsed = true;
 
-  ngOnInit() {
-    this.userService.getUsers().subscribe(users => {
-      this.users = users;
-    });
+  public navLists:any = [
+    {title: "Home", url: ""},
+    {title: "Users", url: "users"},
+    {title: "Albums", url: "albums"},
+    {title: "Posts", url: "posts"}
+  ];
 
-    this.postService.getPosts().subscribe(posts => {
-      this.posts = posts;
-    });
-  }
+  constructor() { }
+
+  ngOnInit() {}
+
 
 }
