@@ -9,7 +9,8 @@ import { Photo } from '../interface/photo';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-albums: Album[];
+
+albums: Album[] | any;
 
   constructor() { }
 
