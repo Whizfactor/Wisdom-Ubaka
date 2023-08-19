@@ -11,9 +11,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   public navCards:any = [
-    {title: "All Users", url: "users"},
-    {title: "All Albums", url: "albums"},
-    {title: "All Posts", url: "posts"}
+    {title: "All Users", url: "/users"},
+    {title: "All Albums", url: "/albums"},
+    {title: "All Posts", url: "/posts"}
   ];
 
   ngOnInit() {

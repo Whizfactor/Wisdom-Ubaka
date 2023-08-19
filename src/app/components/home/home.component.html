@@ -1,16 +1,16 @@
 <div class="container">
   
   <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center my-2 mx-auto p-2" *ngFor="let nav of navCards">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{nav.title}}</h5>
-          <a href="#" class="card-link">
-
-          </a>
-        </div>
-      </div>  
-    </div>
+    <div class="card col-sm-10 col-md-5 col-lg-4 mx-auto text-center mb-5 p-2 shadow bg-light border border-light" style="width: 18rem;" *ngFor="let nav of navCards">
+      <div class="card-body">
+        <h5 class="card-title text-primary">{{nav.title}}</h5>
+        <a [routerLink]="[nav.url]" routerLinkActive="activated" class="card-link">
+          <div class="d-grid gap-2 pt-3">
+            <button type="button" class="btn btn-primary">Check {{nav.title}}</button>
+          </div>
+        </a>
+      </div>
+    </div>  
   </div>
 
 </div>

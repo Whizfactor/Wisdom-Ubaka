@@ -8,3 +8,11 @@ p {
   transform: rotateY(20deg);
   font-family: cursive;
 }
+
+.page {
+  height: 100%;
+}
+
+.body{
+  padding: 10% 0;
+}
