@@ -17,7 +17,7 @@ import { Todo } from '../../interface/todo';
 export class UserDetailsComponent implements OnInit {
   userId: number;
   user: User;
-  todos: any[];
+  todos: Todo[];
   posts: Post[];
   albums: Album[];
 
@@ -30,9 +30,7 @@ export class UserDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.userId = +params['id'];
-      this.loadUserDetails();
+    this.route.queryParams.subscribe.
     });
   }
 
