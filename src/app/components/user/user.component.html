@@ -1,3 +1,17 @@
-<p>
-users works!
-</p>
+<div class="container">
+  
+  <div class="row">
+    <div class="card col-sm-10 col-md-5 col-lg-4 mx-auto text-center mb-5 p-2 shadow bg-light border border-light" style="width: 18rem;" *ngFor="let user of users">
+      <div class="card-body">
+        <h4 class="card-title text-primary fw-bold">{{user.name}}</h4>
+        <h5 class="card-title text-primary">@{{user.username}}</h5>
+        <a [routerLink]="[user.id]" routerLinkActive="activated" class="card-link">
+          <div class="d-grid gap-2 pt-3">
+            <button type="button" class="btn btn-primary">Check out @{{user.username}}'s profile</button>
+          </div>
+        </a>
+      </div>
+    </div>  
+  </div>
+
+</div>
