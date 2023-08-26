@@ -15,9 +15,9 @@ to fetch and display various datasets provided by JSONPlaceholder in an Angular 
 
 ## Introduction
 
-JSONPlaceholder is a fake REST API that provides mock data for testing and learning purposes. This Angular project
-demonstrates how to interact with JSONPlaceholder APIs to retrieve and display datasets such as posts, comments, 
-users, albums, photos, and todos.
+JSONPlaceholder is a fake REST API that provides mock data for testing and learning purposes. This Angular
+project demonstrates how to interact with JSONPlaceholder APIs to retrieve and display datasets such as
+posts, comments, users, albums, photos, and todos.
 
 ## Features
 
