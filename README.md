@@ -3,7 +3,8 @@ Project by Wisdom "Whizfactor" Ubaka
 ```markdown
 # JSONPlaceholder Dummy Data Consumption in Angular
 
-This project is a demonstration of consuming JSONPlaceholder dummy data using Angular. It showcases how to fetch and display various datasets provided by JSONPlaceholder in an Angular application.
+This project is a demonstration of consuming JSONPlaceholder dummy data using Angular. It showcases how 
+to fetch and display various datasets provided by JSONPlaceholder in an Angular application.
 
 ## Table of Contents
 
@@ -14,7 +15,9 @@ This project is a demonstration of consuming JSONPlaceholder dummy data using An
 
 ## Introduction
 
-JSONPlaceholder is a fake REST API that provides mock data for testing and learning purposes. This Angular project demonstrates how to interact with JSONPlaceholder APIs to retrieve and display datasets such as posts, comments, users, albums, photos, and todos.
+JSONPlaceholder is a fake REST API that provides mock data for testing and learning purposes. This Angular project
+demonstrates how to interact with JSONPlaceholder APIs to retrieve and display datasets such as posts, comments, 
+users, albums, photos, and todos.
 
 ## Features
 
