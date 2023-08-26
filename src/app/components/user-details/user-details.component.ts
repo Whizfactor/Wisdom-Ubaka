@@ -26,12 +26,12 @@ export class UserDetailsComponent implements OnInit {
     private postService: PostService,
     private albumService: AlbumService,
     private todoService: TodoService,
-    private route: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe.
-    });
+    this.userId = this.activatedRoute.snapshot.params['id'];
+    this.loadUserDetails();
   }
 
   loadUserDetails() {
@@ -50,5 +50,5 @@ export class UserDetailsComponent implements OnInit {
     this.albumService. getUserAlbums(this.userId).subscribe(albums => {
       this.albums = albums;
     });
-  }
+  };
 }

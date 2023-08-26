@@ -24,3 +24,4 @@ export class AlbumService {
     return this.http.get<Album[]>(`${this.apiUrl}users/${userId}/albums`);
   }
 }
+ 

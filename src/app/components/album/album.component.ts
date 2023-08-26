@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumService } from '../../services/album.service';
 import { Album } from '../../interface/album'; 
-import { Photo } from '../../interface/photo'; 
 
 @Component({
   selector: 'app-album',
@@ -10,9 +9,15 @@ import { Photo } from '../../interface/photo';
 })
 export class AlbumComponent implements OnInit {
 
-albums: Album[] | any;
+  albums: Album[];
 
   constructor(private albumService: AlbumService) { }
+
+  ongetAllAlbums(): void {
+    this.albumService.getAllAlbums().subscribe(
+      albums => this.albums = albums
+    )
+  }
 
   ngOnInit() {
   }
