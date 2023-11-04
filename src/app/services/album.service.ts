@@ -16,11 +16,15 @@ export class AlbumService {
     return this.http.get<Album[]>(`${this.apiUrl}albums`);
   }
 
-  getPhotosByAlbumId(albumId: number): Observable<Photo[]> {
+  getAlbumDetail(albumId: string): Observable<Album[]> {
+    return this.http.get<Album[]>(`${this.apiUrl}albums/${albumId}`)
+  }
+
+  getPhotosByAlbumId(albumId: string): Observable<Photo[]> {
     return this.http.get<Photo[]>(`${this.apiUrl}albums/${albumId}/photos`);
   }
 
-  getUserAlbums(userId: number): Observable<Album[]> {
+  getUserAlbums(userId: string): Observable<Album[]> {
     return this.http.get<Album[]>(`${this.apiUrl}users/${userId}/albums`);
   }
 }

@@ -14,9 +14,9 @@ const routes: Routes = [
   { path: 'users', component: UserComponent },
   { path: 'posts', component: PostComponent },
   { path: 'albums', component: AlbumComponent },
-  { path: 'user/:id', component: UserDetailsComponent },
-  { path: 'album/:id', component: AlbumDetailsComponent },
-  { path: 'post/:id', component: PostDetailsComponent },
+  { path: 'users/:id', component: UserDetailsComponent },
+  { path: 'albums/:id', component: AlbumDetailsComponent },
+  { path: 'posts/:id', component: PostDetailsComponent },
   // Add more routes here if needed
   { path: '**', redirectTo: '/home' }, // Fallback route
 ];

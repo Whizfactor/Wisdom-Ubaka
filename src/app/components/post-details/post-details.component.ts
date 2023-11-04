@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostService } from '../../services/post.service';
 import { Comment } from '../../interface/comment';
+import { Post } from '../../interface/post';
 
 @Component({
   selector: 'app-post-details',
@@ -9,7 +10,7 @@ import { Comment } from '../../interface/comment';
   styleUrls: ['./post-details.component.css']
 })
 export class PostDetailsComponent implements OnInit {
-  postId: number;
+  posts: Post |any;
   comments: Comment[];
 
   constructor(
@@ -17,16 +18,29 @@ export class PostDetailsComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+
+  loadPostComments(postId: string) {
+    this.postService.getCommentsByPostId(postId).subscribe(comments => {
+      this.comments = comments;
+    }
+    );
+  }
+
+  loadPostDetails(postId: string) {
+    this.postService.getPostDetails(postId).subscribe(posts => {
+      this.posts = posts;
+    }
+    );
+  }
+
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.postId = +params['id'];
-      this.loadPostDetails();
+      const postId = params['id'];
+      this.loadPostDetails(postId);
+      this.loadPostComments(postId);
     });
   }
 
-  loadPostDetails() {
-    this.postService.getCommentsByPostId(this.postId).subscribe(comments => {
-      this.comments = comments;
-    });
-  }
+
+
 }

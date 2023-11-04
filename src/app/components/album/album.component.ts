@@ -20,6 +20,7 @@ export class AlbumComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.ongetAllAlbums()
   }
 
 }

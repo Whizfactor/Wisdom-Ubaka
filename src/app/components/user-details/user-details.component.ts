@@ -15,7 +15,7 @@ import { Todo } from '../../interface/todo';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  userId: number;
+  userId: string;
   user: User;
   todos: Todo[];
   posts: Post[];

@@ -16,11 +16,15 @@ export class PostService {
     return this.http.get<Post[]>(`${this.apiUrl}posts`);
   }
 
-  getCommentsByPostId(postId: number): Observable<Comment[]> {
+  getPostDetails(postId: string): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.apiUrl}posts/${postId}`)
+  }
+
+  getCommentsByPostId(postId: string): Observable<Comment[]> {
     return this.http.get<Comment[]>(`${this.apiUrl}posts/${postId}/comments`);
   }
 
-  getUserPosts(userId: number): Observable<Post[]> {
+  getUserPosts(userId: string): Observable<Post[]> {
     return this.http.get<Post[]>(`${this.apiUrl}users/${userId}/posts`);
   }
 }

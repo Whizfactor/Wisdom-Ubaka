@@ -15,7 +15,7 @@ export class TodoService {
     return this.http.get<Todo[]>(`${this.apiUrl}todos`);
   }
 
-  getUserTodos(userId: number): Observable<Todo[]> {
+  getUserTodos(userId: string): Observable<Todo[]> {
     return this.http.get<Todo[]>(`${this.apiUrl}users/${userId}/todos`);
   }
 }

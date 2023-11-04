@@ -1,0 +1,20 @@
+<div class="container" *ngIf="posts"> <!-- Use *ngIf to make sure posts is defined -->
+  <p class="fs-2 text-capitalize text-center">{{ posts.title }}</p>
+  <div>
+    {{ posts.body }}
+  </div>
+  <div class="container mt-5 bg-primary text-light shadow card border-0 bg-gradient">
+    <div class="row">
+      <div class=" col-sm-10 col-md-5 col-lg-4 mx-auto ">
+        <p class="fs-1 card-title text-center text capitlize">Comments</p>
+          <div *ngFor="let comment of comments" class="card border-0 shadow bg-light border my-3">
+            <div class="card-body">
+              <h5 class="card-title text-capitalize">{{ comment.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ comment.email }}</h6>
+              <p class="card-text">{{ comment.body }}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
