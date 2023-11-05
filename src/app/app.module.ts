@@ -39,10 +39,11 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
     Error404Component,
   ],
   imports: [
+    NgbCollapseModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbCollapseModule
+    
     // FormsModule,
   ],
   providers: [UserService, PostService, AlbumService, TodoService, DesignQuotesService],
