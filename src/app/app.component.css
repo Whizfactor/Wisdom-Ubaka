@@ -1,7 +1,7 @@
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.text-3d {
+.text-3d-logo {
   text-shadow: 1px 1px 0 rgb(187, 176, 176), 2px 2px 0 rgb(219, 209, 209), 3px 3px 0 rgb(168, 157, 157);
   /* font-size: 4em; */
   color: rgb(17, 0, 255);
