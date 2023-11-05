@@ -16,7 +16,7 @@ export class AlbumService {
     return this.http.get<Album[]>(`${this.apiUrl}albums`);
   }
 
-  getAlbumDetail(albumId: string): Observable<Album[]> {
+  getAlbumDetails(albumId: string): Observable<Album[]> {
     return this.http.get<Album[]>(`${this.apiUrl}albums/${albumId}`)
   }
 
