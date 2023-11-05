@@ -5,7 +5,7 @@
       <div class="card-body">
         <h4 class="card-title text-primary fw-bold">{{user.name}}</h4>
         <h5 class="card-title text-primary">@{{user.username}}</h5>
-        <a [routerLink]="[user.id]" routerLinkActive="activated" class="card-link">
+        <a [routerLink]="['/users/' + user.id]" routerLinkActive="activated" class="card-link">
           <div class="d-grid gap-2 pt-3">
             <button type="button" class="btn btn-primary">Check out @{{user.username}}'s profile</button>
           </div>
