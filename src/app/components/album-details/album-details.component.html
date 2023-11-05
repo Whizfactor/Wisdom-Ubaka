@@ -5,7 +5,7 @@
     <div class="row">
       <div class=" col-sm-10 col-md-5 col-lg-4 mx-auto ">
         <p class="fs-1 card-title text-center text capitlize">photos</p>
-          <div *ngFor="let photo of photos" class="card border-0 shadow bg-light border my-3">
+          <div *ngFor="let photo of photos| paginate: { itemsPerPage: 5, currentPage: p }" class="card border-0 shadow bg-light border my-3">
             <img [src]="[photo.url]" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-capitalize">{{ photo.title }}</h5>
@@ -15,4 +15,6 @@
       </div>
     </div>
   </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
 </div>

@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card bg-primary text-light shadow mt-3">
+        <div class="card-header">
+          <h3 class="card-title text-center">User Details</h3>
+        </div>
+        <div class="card-body">
+          <img
+            src="https://placehold.it/150x150"
+            class="img-thumbnail rounded-circle mx-auto d-block"
+            alt="User profile picture"
+          />
+          <h4 class="card-title text-center mt-3">{{ user.name }}</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Username: {{ user.username }}</li>
+            <li class="list-group-item">Email: {{ user.email }}</li>
+            <li class="list-group-item">
+              Address:
+              {{ user.address.street }}, {{ user.address.suite }},
+              {{ user.address.city }}, {{ user.address.zipcode }}
+            </li>
+            <li class="list-group-item">Phone: {{ user.phone }}</li>
+            <li class="list-group-item">Website: {{ user.website }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card bg-primary text-light shadow mt-3">
+        <div class="card-header">
+          <h3 class="card-title text-center">User Posts</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li
+              *ngFor="let post of posts"
+              class="list-group-item border-bottom-primary"
+            >
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="card bg-primary text-light shadow">
+            <div class="card-header">
+              <h3 class="card-title text-center">User Albums</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li *ngFor="let album of albums" class="list-group-item">
+                  <h5 class="card-title">{{ album.title }}</h5>
+                  <a [href]="['albums/' + album.id]" routerLinkActive="activated" class="card-link">
+                    <div class="d-grid gap-2 pt-3">
+                      <button type="button" class="btn btn-primary bg-gradient">Check Out Album </button>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-primary text-light shadow">
+            <div class="card-header">
+              <h3 class="card-title text-center">User Todos</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li *ngFor="let todo of todos" class="list-group-item">
+                  <h5 class="card-title">{{ todo.title }}</h5>
+                  <p class="card-text">
+                    {{ todo.completed ? "Completed" : "Incomplete" }}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
