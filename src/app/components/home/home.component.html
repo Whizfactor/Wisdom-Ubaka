@@ -1,3 +1,33 @@
+<div class="container mt-5">
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="infographic shadow-lg mb-5" (mouseover)="onInfographicHover()" (mouseout)="onInfographicMouseOut()">
+        <h1>Wisdom Skills</h1>
+        <ul>
+          <li *ngFor="let skill of skills" class="skill-item">
+            <h2>{{ skill.name }}</h2>
+            <div class="progress">
+              <div class="progress-bar"
+                role="progressbar"
+                [style.width.%]="skill.progress"
+                [attr.aria-valuenow]="skill.progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                (mouseover)="onProgressHover($event, skill.progress)"
+                (mouseout)="onProgressMouseOut($event)">
+                {{ skill.progress }}%
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
   
   <div class="row">

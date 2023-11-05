@@ -1,0 +1,11 @@
+<div class="container bg-warning bg-gradient py-5">
+  <h2 class="text-3d">Quotes </h2>
+  <div class="card-deck">
+    <div class="card box bg-success border-0 mx-2 my-4" *ngFor="let quote of quotes">
+      <div class="card-body">
+        <p class="card-text text-light" [innerHTML]="quote.content"></p>
+      </div>
+    </div>
+  </div>
+</div>
+  

@@ -20,7 +20,7 @@ export class AlbumDetailsComponent implements OnInit {
   ) {}
 
   loadAlbumDetails(albumId: string) {
-    this.albumService.getPhotosByAlbumId(albumId).subscribe((albums) => {
+    this.albumService.getAlbumDetails(albumId).subscribe((albums) => {
       this.albums = albums;
     });
   }
