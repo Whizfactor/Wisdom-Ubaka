@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
 
   public navLists:any = [
     {title: "Home", url: ""},
+    {title: "Calculator", url: ""},
+    {title: "Design Quotes", url: ""},
     {title: "Users", url: "/users"},
     {title: "Albums", url: "/albums"},
     {title: "Posts", url: "/posts"}
