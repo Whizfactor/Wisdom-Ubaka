@@ -21,7 +21,9 @@ import { DesignQuotesComponent } from './components/design-quotes/design-quotes.
 import { Error404Component } from './components/error-404/error-404.component'
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -42,8 +44,9 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbCollapseModule
-    // FormsModule,
+    NgbCollapseModule,
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [UserService, PostService, AlbumService, TodoService, DesignQuotesService],
   bootstrap: [AppComponent]
