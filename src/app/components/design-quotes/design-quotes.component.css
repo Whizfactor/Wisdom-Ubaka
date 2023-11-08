@@ -18,4 +18,14 @@ p {
   transition: all 0.5s ease-in-out;
   /* background-color: rgb(2, 255, 23); */
 }
+.quote-bg{
+  background-color: rgb(12, 43, 129);
+  color: rgb(239, 237, 243);
+}
+
+.quote-bg:hover{
+  background-color: white;
+  color: rgb(12, 43, 129);
+  transition: all 1.5s ease-in-out;
+}
 

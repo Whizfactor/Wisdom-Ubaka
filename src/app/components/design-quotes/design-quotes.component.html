@@ -1,9 +1,9 @@
 <div class="container py-5">
-  <h2 class="text-3d-heading text-center">Quotes </h2>
+  <h2 class="text-3d-heading text-center">Design Quotes </h2>
   <div class="card-deck">
     <div class="card box bg-primary border-0 mx-2 my-4" *ngFor="let quote of quotes">
-      <div class="card-body">
-        <p class="card-text text-light fw-bold fs-2" [innerHTML]="quote.content"></p>
+      <div class="card-body quote-bg rounded-3">
+        <p class="card-text fw-bold fs-4" [innerHTML]="quote.content"></p>
       </div>
     </div>
   </div>
