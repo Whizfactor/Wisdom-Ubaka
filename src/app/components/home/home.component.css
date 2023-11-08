@@ -2,11 +2,18 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .text-3d {
-  text-shadow: 1px 1px 0 #444, 2px 2px 0 #444, 3px 3px 0 #444;
+  text-shadow: 1px 1px 0 rgb(105, 103, 103), 2px 2px 0 rgb(116, 115, 115), 3px 3px 0 rgb(128, 125, 125);
   font-size: 4em;
-  color: rgb(201, 201, 201);
+  color: rgb(0, 0, 0);
   transform: rotateY(20deg);
   font-family: cursive;
+  transition: all 1.5s ease-in-out;
+}
+
+.text-3d:hover{
+  color: #ffffffe5;
+  text-shadow: 5px 5x 0 rgb(34, 34, 34), 7px 7px 0 rgb(24, 23, 23), 9px 9px 0 rgb(12, 11, 11);
+  transition: all 2s ease-in-out;
 }
 
 li {
@@ -45,12 +52,13 @@ li {
   background-color: #f2f2f2;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #ccc;
-  transition: background-color 0.5s ease;
+  transition: background-color 1.5s ease;
 }
 
 .infographic.infographic-hover {
   background-color: rgb(35, 130, 240);
   color: orange;
+  transition: all 1.5s ease-in-out;
 }
 
 .infographic h1 {
@@ -101,8 +109,29 @@ h2:hover {
   transition: all 1s ease-in-out;
 }
 
+.Wisdom-Hover{
+  transition: all 1.5s ease-in-out;
+}
+
 .Wisdom-Hover:hover{
   transform: scale(1.5);
   color: white;
   transition: all 1.5s ease-in-out;
+}
+
+
+.marquee {
+  white-space: nowrap;
+  /* overflow: hidden; */
+  /* animation: marquee 8s linear infinite; */
+  animation: marquee  8s infinite linear alternate-reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
