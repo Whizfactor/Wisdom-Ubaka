@@ -17,7 +17,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { AlbumDetailsComponent } from './components/album-details/album-details.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { DesignQuotesComponent } from './components/design-quotes/design-quotes.component';
-// import { CalculatorComponent } from './components/calculator/calculator.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 import { Error404Component } from './components/error-404/error-404.component'
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
@@ -37,7 +37,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AlbumDetailsComponent,
     UserDetailsComponent,
     DesignQuotesComponent,
-    // CalculatorComponent,
+    CalculatorComponent,
     Error404Component,
   ],
   imports: [

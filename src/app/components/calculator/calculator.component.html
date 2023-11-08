@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form class="rounded-5 p-4 mt-5 shadow-lg my-5 bg-dark">
+        <div class="form-group">
+          <input type="text" class="form-control" [value]="result" disabled>
+        </div>
+        <div class="form-group">
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-danger fw-bold" (click)="clearScreen()">Clear</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('7')">7</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('8')">8</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('9')">9</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('4')">4</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('5')">5</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('6')">6</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('1')">1</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('2')">2</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('3')">3</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-4 mx-auto d-grid gap-2">
+              <button type="button" class="btn btn-secondary fw-bold" (click)="calc('0')">0</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-primary fw-bold" (click)="calc('+')">+</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-primary fw-bold" (click)="calc('-')">-</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-primary fw-bold" (click)="calc('*')">x</button>
+            </div>
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-primary fw-bold" (click)="calc('/')">/</button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col d-grid gap-2">
+              <button type="button" class="btn btn-success" (click)="calculate()">=</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
