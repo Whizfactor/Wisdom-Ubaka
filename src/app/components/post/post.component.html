@@ -1,7 +1,7 @@
 <div class="container">
   <p class="text-center text-3d-heading">Posts</p>
     <div class="row">
-      <div class="card col-sm-10 col-md-5 col-lg-4 mx-auto text-center mb-5 p-2 shadow bg-light border border-light" style="width: 18rem;" *ngFor="let post of posts">
+      <div class="card col-sm-10 col-md-5 col-lg-4 mx-auto text-center mb-5 p-2 shadow bg-light border border-light" style="width: 18rem;" *ngFor="let post of posts| paginate: { itemsPerPage: 10, currentPage: p }">
         <div class="card-body">
           <h5 class="card-title text-primary text-capitalize">{{post.title}}</h5>
           <a [routerLink]="['/posts/' + post.id]" routerLinkActive="activated" class="card-link">
@@ -12,5 +12,6 @@
         </div>
       </div>  
     </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   
   </div>

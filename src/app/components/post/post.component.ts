@@ -8,6 +8,8 @@ import { Post } from '../../interface/post';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  p: number = 1;
+
   
   posts: Post[];
 

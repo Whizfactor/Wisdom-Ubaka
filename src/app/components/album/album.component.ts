@@ -8,6 +8,7 @@ import { Album } from '../../interface/album';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
+  a: number = 1;
 
   albums: Album[];
 

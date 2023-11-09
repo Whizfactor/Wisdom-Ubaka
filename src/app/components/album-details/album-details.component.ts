@@ -12,7 +12,7 @@ import { Photo } from '../../interface/photo';
 export class AlbumDetailsComponent implements OnInit {
   albums: Album | any;
   photos: Photo[];
-  p: number = 1;
+  a_d: number = 1;
 
   constructor(
     private albumService: AlbumService,

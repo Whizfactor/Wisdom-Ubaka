@@ -26,3 +26,9 @@ a.link:hover{
   color: white;
   
 }
+
+@media (min-width: 576px){
+  .nav-bg{
+    background-color: orange;
+  }
+}
