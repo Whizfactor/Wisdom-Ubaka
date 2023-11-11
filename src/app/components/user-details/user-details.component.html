@@ -4,7 +4,9 @@
     <div class="">
       <div class="card bg-primary text-light shadow my-5">
         <div class="card-header">
-          <h3 class="card-title text-center">{{ user.name }} Profile</h3>
+          <h3 class="card-title text-center fw-bold">
+            {{ user.name }} Profile
+          </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
@@ -21,42 +23,91 @@
         </div>
       </div>
     </div>
-    
+
     <div class="">
       <div class="card bg-primary text-light border-0 my-5">
         <div class="card-header mb-5">
           <h3 class="card-title text-center">{{ user.name }} Posts</h3>
         </div>
         <div class="card-body">
-          <div class="card col-sm-12 col-md-6 col-lg-4 mx-auto text-center mb-5 shadow bg-light" style="width: 18rem;" *ngFor="let post of posts">
-            <div class="card-body">
-              <h5 class="card-title text-primary text-capitalize">{{post.title}}</h5>
-              <a [routerLink]="[post.id]" routerLinkActive="activated" class="card-link">
-                <div class="d-grid gap-2 pt-3">
-                  <button type="button" class="btn btn-primary shadow bg-gradient">Read more </button>
-                </div>
-              </a>
-            </div>
-          </div> 
-        </div>
-      </div>
-
-      <div class="row mt-3 ">
-        <div class="">
-          <div class="card bg-light text-light border-0 my-5">
-            <div class="card-header mb-5">
-              <h3 class="card-title text-center text-primary">{{ user.name }} Albums</h3>
-            </div>
-            <div class="card col-sm-12 col-md-6 col-lg-4 mx-auto text-center mb-5 shadow bg-light" style="width: 18rem;" *ngFor="let album of albums">
+          <div class="row">
+            <div
+              class="
+                card
+                col-sm-12 col-md-6 col-lg-4
+                mx-auto
+                text-center
+                mb-5
+                shadow
+                bg-light
+              "
+              style="width: 18rem;"
+              *ngFor="let post of posts"
+            >
               <div class="card-body">
-                <h5 class="card-title text-primary text-capitalize">{{album.title}}</h5>
-                <a [routerLink]="['/albums/' + album.id]" routerLinkActive="activated" class="card-link">
+                <h5 class="card-title text-primary text-capitalize">
+                  {{ post.title }}
+                </h5>
+                <a
+                  [routerLink]="[post.id]"
+                  routerLinkActive="activated"
+                  class="card-link"
+                >
                   <div class="d-grid gap-2 pt-3">
-                    <button type="button" class="btn btn-primary bg-gradient">Check Out Album </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary shadow bg-gradient"
+                    >
+                      Read more
+                    </button>
                   </div>
                 </a>
               </div>
-            </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="">
+          <div class="card bg-light text-light border-0 my-5">
+            <div class="card-header mb-5">
+              <h3 class="card-title text-center text-primary">
+                {{ user.name }} Albums
+              </h3>
+            </div>
+            <div class="row">
+              <div
+                class="
+                  card
+                  col-sm-12 col-md-6 col-lg-4
+                  mx-auto
+                  text-center
+                  mb-5
+                  shadow
+                  bg-light
+                "
+                style="width: 18rem;"
+                *ngFor="let album of albums"
+              >
+                <div class="card-body">
+                  <h5 class="card-title text-primary text-capitalize">
+                    {{ album.title }}
+                  </h5>
+                  <a
+                    [routerLink]="['/albums/' + album.id]"
+                    routerLinkActive="activated"
+                    class="card-link"
+                  >
+                    <div class="d-grid gap-2 pt-3">
+                      <button type="button" class="btn btn-primary bg-gradient">
+                        Check Out Album
+                      </button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -65,17 +116,36 @@
             <div class="card-header mb-5">
               <h3 class="card-title text-center">{{ user.name }} Todos</h3>
             </div>
-            <div class="card col-sm-12 col-md-6 col-lg-4 mx-auto text-center mb-5 shadow bg-light" style="width: 18rem;" *ngFor="let todo of todos">
-            <div class="card-body">
-              <h5 class="card-title text-primary text-capitalize">{{ todo.title }}</h5>
-              <p class="card-text" [ngClass]="{
-                'text-success': todo.completed,
-                'text-danger': !todo.completed
-              }">
-                {{ todo.completed ? 'Completed' : 'Incomplete' }}
-              </p>
+            <div class="row">
+              <div
+              class="
+                card
+                col-sm-12 col-md-6 col-lg-4
+                mx-auto
+                text-center
+                mb-5
+                shadow
+                bg-light
+              "
+              style="width: 18rem;"
+              *ngFor="let todo of todos"
+            >
+              <div class="card-body">
+                <h5 class="card-title text-primary text-capitalize">
+                  {{ todo.title }}
+                </h5>
+                <p
+                  class="card-text"
+                  [ngClass]="{
+                    'text-success': todo.completed,
+                    'text-danger': !todo.completed
+                  }"
+                >
+                  {{ todo.completed ? 'Completed' : 'Incomplete' }}
+                </p>
+              </div>
             </div>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
